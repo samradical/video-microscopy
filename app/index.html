@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>video-microscopy</title>
+  </head>
+  <body>
+    <textarea id="config" name="textarea" rows="20" cols="50" style="display:inline-block;"></textarea>
+    <button id="btn-reload">Update settings</button>
+    <span>ctrl/cmd + A to select all the settings. Copy them, modify and paste back in and update</span>
+    <div id="stage-1">
+      <h4>Choose the files</h4>
+      <div><strong>Current settings:</strong></div>
+      <div id="stage1-settings"></div>
+      <br>
+      <br>
+      <div>The folder where raw all <i>Timepoints</i> are </div>
+      <button id="btn-input">Choose input directory</button>
+      <br>
+      <br>
+      <div>The folder where the videos should be saved</div>
+      <button id="btn-output">Choose output directory</button>
+      <br>
+      <br>
+      <div>Where ImageJ/FIJI file is</div>
+      <button id="btn-imagej">Choose imageJ executable</button>
+      <br>
+      <br>
+    </div>
+    <HR WIDTH="100%">
+    <div id="stage-2">
+      <div><strong>Current patterns:</strong></div>
+      <div>Loop over all the timepoint folder matching these patterns</div>
+      <textarea id="stage2-settings" name="textarea" rows="10" cols="20" style="display:inline-block;"></textarea>
+      <textarea id="stage2-output" name="textarea" rows="10" cols="20" style="display:inline-block;">Output...</textarea>
+      <HR WIDTH="100%">
+      <div><strong>Organise:</strong></div>
+      <div id="stage2-settings2"></div>
+      <button id="btn-organise">ORGANISE THE FILES (cannot undo)
+      </button>
+      <textarea id="stage2-organise-out" name="textarea" rows="10" cols="20" style="display:inline-block;">Output...</textarea>
+      <span id="stage2-organise-out-prog"></span>
+      <HR WIDTH="100%">
+      <button id="btn-convert">MAKE VIDEOS</button>
+      <div>Needs to organise the files first...</div>
+      <textarea id="stage2-convert-out" name="textarea" rows="10" cols="40" style="display:inline-block;">Output...</textarea>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>

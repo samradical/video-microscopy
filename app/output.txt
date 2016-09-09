@@ -1,0 +1,50 @@
+Start
+java.lang.VerifyError: Bad invokespecial instruction: current class isn't assignable to reference class.
+Exception Details:
+  Location:
+    ij/gui/GenericDialog.repaint()V @1: invokespecial
+  Reason:
+    Error exists in the bytecode
+  Bytecode:
+    0x0000000: 2ab7 02cd 2ab4 02d0 c600 2403 3c1b 2ab4
+    0x0000010: 02d0 b602 78a2 0017 2ab4 02d0 1bb6 02d1
+    0x0000020: c002 d3b6 02d4 8401 01a7 ffe4 b1       
+  Stackmap Table:
+    append_frame(@13,Integer)
+    chop_frame(@44,1)
+
+	at ij.plugin.FolderOpener.showDialog(FolderOpener.java:364)
+	at ij.plugin.FolderOpener.run(FolderOpener.java:116)
+	at ij.IJ.runPlugIn(IJ.java:186)
+	at ij.Executer.runCommand(Executer.java:137)
+	at ij.Executer.run(Executer.java:66)
+	at ij.IJ.run(IJ.java:296)
+	at ij.macro.Functions.doRun(Functions.java:601)
+	at ij.macro.Functions.doFunction(Functions.java:96)
+	at ij.macro.Interpreter.doStatement(Interpreter.java:230)
+	at ij.macro.Interpreter.doStatements(Interpreter.java:218)
+	at ij.macro.Interpreter.run(Interpreter.java:115)
+	at ij.macro.Interpreter.run(Interpreter.java:85)
+	at ij.macro.Interpreter.run(Interpreter.java:96)
+	at ij.plugin.Macro_Runner.runMacro(Macro_Runner.java:155)
+	at ij.plugin.Macro_Runner.runMacroFile(Macro_Runner.java:139)
+	at ij.IJ.runMacroFile(IJ.java:147)
+	at net.imagej.legacy.IJ1Helper$4.call(IJ1Helper.java:988)
+	at net.imagej.legacy.IJ1Helper$4.call(IJ1Helper.java:984)
+	at net.imagej.legacy.IJ1Helper.runMacroFriendly(IJ1Helper.java:918)
+	at net.imagej.legacy.IJ1Helper.runMacroFile(IJ1Helper.java:984)
+	at net.imagej.legacy.LegacyCommandline$Macro.handle(LegacyCommandline.java:188)
+	at org.scijava.console.DefaultConsoleService.processArgs(DefaultConsoleService.java:93)
+	at net.imagej.legacy.LegacyConsoleService.processArgs(LegacyConsoleService.java:77)
+	at org.scijava.AbstractGateway.launch(AbstractGateway.java:95)
+	at net.imagej.Main.launch(Main.java:62)
+	at net.imagej.Main.main(Main.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:279)
+	at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:186)
+	at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:77)
+
+There are no images open.
